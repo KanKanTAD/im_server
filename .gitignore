@@ -32,4 +32,6 @@
 *.app
 
 /build/
-/.ccls-cache/*
+/.ccls-cache/
+
+*.blob
