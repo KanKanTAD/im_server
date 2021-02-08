@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -g  -rdynamic CMakeFiles/main.dir/main.cc.o  -o main  -lpthread 
+/usr/bin/c++  -Wall -g   CMakeFiles/main.dir/main.cc.o  -o main  -lpthread -lpthread 

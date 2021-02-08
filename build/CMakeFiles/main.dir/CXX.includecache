@@ -13,6 +13,12 @@ iostream
 -
 netinet/in.h
 -
+spdlog/cfg/env.h
+-
+spdlog/common.h
+-
+spdlog/spdlog.h
+-
 stdlib.h
 -
 string.h

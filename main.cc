@@ -1,6 +1,9 @@
 #include <functional>
 #include <iostream>
 #include <netinet/in.h>
+#include <spdlog/cfg/env.h>
+#include <spdlog/common.h>
+#include <spdlog/spdlog.h>
 #include <stdlib.h>
 #include <string.h>
 #include <sys/socket.h>
@@ -17,18 +20,21 @@ struct Deter {
 void handle_udp_msg(int);
 
 int main() {
-  puts("hi");
-  sleep(1);
+  spdlog::set_level(spdlog::level::debug);
+  spdlog::info(" im server is beginning");
 
   int server_fd = -1;
   sockaddr_in ser_addr;
 
   server_fd = socket(AF_INET, SOCK_DGRAM, 0);
+  spdlog::debug("create socket [{0}]",server_fd);
   if (server_fd < 0) {
-    std::cerr << "create socket fail!" << std::endl;
+    spdlog::error("create socket fail!");
     return -1;
   }
-  Deter ser_deter_([&]() { close(server_fd); });
+  Deter ser_deter_([&]() {
+		  spdlog::debug("server_fd[{0}] will be closed!",server_fd);
+		  close(server_fd); });
 
   memset(&ser_addr, 0, sizeof(ser_addr));
 
