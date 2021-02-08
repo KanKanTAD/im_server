@@ -7,9 +7,17 @@
 #IncludeRegexTransform: 
 
 /home/v_fantnzeng/Public/linux_study/im_server/main.cc
+functional
+-
 iostream
 -
+netinet/in.h
+-
 stdlib.h
+-
+string.h
+-
+sys/socket.h
 -
 unistd.h
 -
