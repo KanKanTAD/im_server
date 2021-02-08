@@ -7,8 +7,14 @@ set(CMAKE_CXX_FLAGS -Wall)
 set(CMAKE_BUILD_TYPE Debug)
 
 find_package(spdlog REQUIRED)
+set(cryptopplib -lcryptopp)
 
 set(SRC_)
 
 add_executable(main main.cc ${SRC_})
-target_link_libraries(main PRIVATE spdlog::spdlog_header_only -lpthread)
+
+target_link_libraries(main PRIVATE
+	spdlog::spdlog_header_only
+	${cryptopplib}
+	-lpthread
+)
