@@ -1,6 +1,8 @@
+#include <csignal>
 #include <functional>
 #include <iostream>
 #include <netinet/in.h>
+#include <signal.h>
 #include <spdlog/cfg/env.h>
 #include <spdlog/common.h>
 #include <spdlog/spdlog.h>
@@ -17,13 +19,16 @@ struct Deter {
   virtual ~Deter() { func(); }
 };
 
-void handle_udp_msg(int);
+static void signal_handler(int);
+static void handle_udp_msg(int);
+static int server_fd = -1;
 
 int main() {
   spdlog::set_level(spdlog::level::debug);
   spdlog::info(" im server is beginning");
 
-  int server_fd = -1;
+  signal(SIGKILL, signal_handler);
+  signal(SIGINT, signal_handler);
 
   server_fd = socket(AF_INET, SOCK_DGRAM, 0);
   spdlog::debug("create socket [{0}]", server_fd);
@@ -79,5 +84,21 @@ void handle_udp_msg(int server_fd) {
     spdlog::debug("sendto client 'recieved'");
     sendto(server_fd, buff, buff_size, 0, (sockaddr *)&client_addr,
            sizeof(client_addr));
+  }
+}
+
+void signal_handler(int signum) {
+  spdlog::debug("signum:[{0}]!", signum);
+  switch (signum) {
+  case SIGINT:
+  case SIGKILL:
+    if (server_fd >= 0) {
+      spdlog::debug("server_fd[{0}] will be closed!", server_fd);
+      close(server_fd);
+    }
+    exit(0);
+    break;
+  default:
+    break;
   }
 }

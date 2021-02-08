@@ -150,6 +150,33 @@ main.cc.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cc.s
 .PHONY : main.cc.s
 
+master/ClientCache.o: master/ClientCache.cc.o
+
+.PHONY : master/ClientCache.o
+
+# target to build an object file
+master/ClientCache.cc.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/master/ClientCache.cc.o
+.PHONY : master/ClientCache.cc.o
+
+master/ClientCache.i: master/ClientCache.cc.i
+
+.PHONY : master/ClientCache.i
+
+# target to preprocess a source file
+master/ClientCache.cc.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/master/ClientCache.cc.i
+.PHONY : master/ClientCache.cc.i
+
+master/ClientCache.s: master/ClientCache.cc.s
+
+.PHONY : master/ClientCache.s
+
+# target to generate assembly for a file
+master/ClientCache.cc.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/master/ClientCache.cc.s
+.PHONY : master/ClientCache.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... master/ClientCache.o"
+	@echo "... master/ClientCache.i"
+	@echo "... master/ClientCache.s"
 .PHONY : help
 
 

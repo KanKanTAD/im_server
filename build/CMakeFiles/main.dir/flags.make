@@ -6,5 +6,5 @@ CXX_FLAGS = -Wall -g   -std=gnu++1y
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/v_fantnzeng/Public/linux_study/im_server/./master 
 

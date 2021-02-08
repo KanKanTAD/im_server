@@ -3,3 +3,6 @@
 
 CMakeFiles/main.dir/main.cc.o
  /home/v_fantnzeng/Public/linux_study/im_server/main.cc
+CMakeFiles/main.dir/master/ClientCache.cc.o
+ /home/v_fantnzeng/Public/linux_study/im_server/master/ClientCache.cc
+ /home/v_fantnzeng/Public/linux_study/im_server/master/ClientCache.h
