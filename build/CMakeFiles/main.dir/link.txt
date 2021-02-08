@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -g   CMakeFiles/main.dir/main.cc.o  -o main  -lpthread -lpthread 
+/usr/bin/c++  -Wall -g   CMakeFiles/main.dir/main.cc.o  -o main  -lcryptopp -lpthread -lpthread 

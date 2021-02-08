@@ -6,10 +6,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS -Wall)
 set(CMAKE_BUILD_TYPE Debug)
 
+include_directories(./master)
+
 find_package(spdlog REQUIRED)
 set(cryptopplib -lcryptopp)
 
-set(SRC_)
+set(SRC_ ./master/ClientCache.cc)
 
 add_executable(main main.cc ${SRC_})
 
