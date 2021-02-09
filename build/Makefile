@@ -123,6 +123,19 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+#=============================================================================
+# Target rules for targets named test_json
+
+# Build rule for target.
+test_json: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_json
+.PHONY : test_json
+
+# fast build rule for target.
+test_json/fast:
+	$(MAKE) -f test/CMakeFiles/test_json.dir/build.make test/CMakeFiles/test_json.dir/build
+.PHONY : test_json/fast
+
 main.o: main.cc.o
 
 .PHONY : main.o
@@ -150,33 +163,6 @@ main.cc.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cc.s
 .PHONY : main.cc.s
 
-master/ClientCache.o: master/ClientCache.cc.o
-
-.PHONY : master/ClientCache.o
-
-# target to build an object file
-master/ClientCache.cc.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/master/ClientCache.cc.o
-.PHONY : master/ClientCache.cc.o
-
-master/ClientCache.i: master/ClientCache.cc.i
-
-.PHONY : master/ClientCache.i
-
-# target to preprocess a source file
-master/ClientCache.cc.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/master/ClientCache.cc.i
-.PHONY : master/ClientCache.cc.i
-
-master/ClientCache.s: master/ClientCache.cc.s
-
-.PHONY : master/ClientCache.s
-
-# target to generate assembly for a file
-master/ClientCache.cc.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/master/ClientCache.cc.s
-.PHONY : master/ClientCache.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +172,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... test_json"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... master/ClientCache.o"
-	@echo "... master/ClientCache.i"
-	@echo "... master/ClientCache.s"
 .PHONY : help
 
 

@@ -1,0 +1,7 @@
+{
+	"type": "sqlite3",
+	"filepath": "../../my_im.db3",
+	"url": "sqlite:///../../my_im.db3",
+	"username": "none",
+	"password": "none"
+}

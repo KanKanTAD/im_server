@@ -5,9 +5,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/v_fantnzeng/Public/linux_study/im_server/main.cc" "/home/v_fantnzeng/Public/linux_study/im_server/build/CMakeFiles/main.dir/main.cc.o"
-  "/home/v_fantnzeng/Public/linux_study/im_server/master/ClientCache.cc" "/home/v_fantnzeng/Public/linux_study/im_server/build/CMakeFiles/main.dir/master/ClientCache.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "JSON_USE_IMPLICIT_CONVERSIONS=1"
+  )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

@@ -9,15 +9,21 @@ set(CMAKE_BUILD_TYPE Debug)
 
 include_directories(./master)
 
+find_package(nlohmann_json REQUIRED)
 find_package(spdlog REQUIRED)
 set(cryptopplib -lcryptopp)
 
-set(SRC_ ./master/ClientCache.cc)
+set(SRC_ 
+	#	./master/ClientCache.cc
+	#./master/Configure.cc
+	#./master/Utils.cc
+)
 
 add_executable(main main.cc ${SRC_})
 
 target_link_libraries(main PRIVATE
 	spdlog::spdlog_header_only
+	nlohmann_json::nlohmann_json
 	${cryptopplib}
 	-lpthread
 )

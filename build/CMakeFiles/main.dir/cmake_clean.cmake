@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/main.dir/main.cc.o"
-  "CMakeFiles/main.dir/master/ClientCache.cc.o"
   "main"
   "main.pdb"
 )
