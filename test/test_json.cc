@@ -1,3 +1,4 @@
+#include "Configure.h"
 #include <exception>
 #include <fstream>
 #include <gtest/gtest.h>
@@ -32,6 +33,15 @@ TEST(TestJSON, find_none) {
 
   auto non_it = j.find("kkkkkk");
   ASSERT_TRUE(non_it == j.end());
+}
+
+TEST(TestJSON, read_configure) {
+  DB_Config cfg;
+  DB_Config::load(config_path, cfg);
+  ASSERT_EQ(cfg.type, DBTYPE::kSqlite);
+  ASSERT_EQ(cfg.username,"none");
+  ASSERT_EQ(cfg.password,"none");
+  ASSERT_EQ(cfg.url,"sqlite:///../../my_im.db3");
 }
 
 int main(int argc, char *argv[]) {

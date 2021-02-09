@@ -1,5 +1,4 @@
-#include <Utils.h>
-#include <cctype>
+#include "Utils.h"
 
 namespace utils {
 
@@ -57,6 +56,7 @@ std::string to_lower(const std::string &ins) {
   auto res = ins;
   return be_lower(res);
 }
+
 std::string to_upper(const std::string &ins) {
   auto res = ins;
   return be_upper(res);

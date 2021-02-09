@@ -19,4 +19,5 @@ inline std::string& be_lower(std::string &);
 inline std::string to_lower(const std::string &);
 inline std::string& be_upper(std::string &);
 inline std::string to_upper(const std::string &);
+
 } // namespace utils

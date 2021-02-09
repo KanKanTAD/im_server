@@ -12,20 +12,19 @@ include_directories(./master)
 find_package(nlohmann_json REQUIRED)
 find_package(spdlog REQUIRED)
 set(cryptopplib -lcryptopp)
+set(fmtlib -lfmt)
 
-set(SRC_ 
-	#	./master/ClientCache.cc
-	#./master/Configure.cc
-	#./master/Utils.cc
-)
+add_subdirectory(./master)
 
-add_executable(main main.cc ${SRC_})
+add_executable(main main.cc)
 
 target_link_libraries(main PRIVATE
+	master
 	spdlog::spdlog_header_only
 	nlohmann_json::nlohmann_json
 	${cryptopplib}
-	-lpthread
+	${fmtlib}
+	pthread
 )
 
 add_subdirectory(./test)

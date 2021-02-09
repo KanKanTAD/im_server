@@ -124,6 +124,19 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
+# Target rules for targets named master
+
+# Build rule for target.
+master: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 master
+.PHONY : master
+
+# fast build rule for target.
+master/fast:
+	$(MAKE) -f master/CMakeFiles/master.dir/build.make master/CMakeFiles/master.dir/build
+.PHONY : master/fast
+
+#=============================================================================
 # Target rules for targets named test_json
 
 # Build rule for target.
@@ -172,6 +185,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... master"
 	@echo "... test_json"
 	@echo "... main.o"
 	@echo "... main.i"

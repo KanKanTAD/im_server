@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.0/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.0/CMakeSystem.cmake"
+  "../master/CMakeLists.txt"
   "../test/CMakeLists.txt"
   "/usr/local/lib64/cmake/nlohmann_json/nlohmann_jsonConfig.cmake"
   "/usr/local/lib64/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake"
@@ -57,11 +58,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "master/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
+  "master/CMakeFiles/master.dir/DependInfo.cmake"
   "test/CMakeFiles/test_json.dir/DependInfo.cmake"
   )

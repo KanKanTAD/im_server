@@ -224,6 +224,9 @@ GTEST_MAIN_LIBRARY:FILEPATH=/usr/local/lib64/libgtest_main.a
 //Path to a library.
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
+//The directory containing a CMake configuration file for fmt.
+fmt_DIR:PATH=/usr/local/lib64/cmake/fmt
+
 //Value Computed by CMake
 im_server_BINARY_DIR:STATIC=/home/v_fantnzeng/Public/linux_study/im_server/build
 
@@ -351,7 +354,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

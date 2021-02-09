@@ -39,6 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/v_fantnzeng/Public/linux_study/im_server/build/master/cmake_install.cmake")
   include("/home/v_fantnzeng/Public/linux_study/im_server/build/test/cmake_install.cmake")
 
 endif()
