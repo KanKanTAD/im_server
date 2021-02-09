@@ -1,9 +1,13 @@
 /home/v_fantnzeng/Public/linux_study/im_server/build/CMakeFiles/rebuild_cache.dir
 /home/v_fantnzeng/Public/linux_study/im_server/build/CMakeFiles/edit_cache.dir
-/home/v_fantnzeng/Public/linux_study/im_server/build/CMakeFiles/main.dir
+/home/v_fantnzeng/Public/linux_study/im_server/build/CMakeFiles/server.dir
 /home/v_fantnzeng/Public/linux_study/im_server/build/master/CMakeFiles/rebuild_cache.dir
 /home/v_fantnzeng/Public/linux_study/im_server/build/master/CMakeFiles/edit_cache.dir
 /home/v_fantnzeng/Public/linux_study/im_server/build/master/CMakeFiles/master.dir
 /home/v_fantnzeng/Public/linux_study/im_server/build/test/CMakeFiles/edit_cache.dir
+/home/v_fantnzeng/Public/linux_study/im_server/build/test/CMakeFiles/test_utils.dir
+/home/v_fantnzeng/Public/linux_study/im_server/build/test/CMakeFiles/test_configure.dir
+/home/v_fantnzeng/Public/linux_study/im_server/build/test/CMakeFiles/test_spdlog.dir
 /home/v_fantnzeng/Public/linux_study/im_server/build/test/CMakeFiles/rebuild_cache.dir
 /home/v_fantnzeng/Public/linux_study/im_server/build/test/CMakeFiles/test_json.dir
+/home/v_fantnzeng/Public/linux_study/im_server/build/test/CMakeFiles/test_none.dir

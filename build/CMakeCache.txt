@@ -98,7 +98,7 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
@@ -232,6 +232,9 @@ im_server_BINARY_DIR:STATIC=/home/v_fantnzeng/Public/linux_study/im_server/build
 
 //Value Computed by CMake
 im_server_SOURCE_DIR:STATIC=/home/v_fantnzeng/Public/linux_study/im_server
+
+//Dependencies for the target
+master_LIB_DEPENDS:STATIC=general;pthread;general;spdlog;
 
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=/usr/local/lib64/cmake/nlohmann_json

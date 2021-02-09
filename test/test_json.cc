@@ -1,10 +1,7 @@
-#include "Configure.h"
-#include <exception>
 #include <fstream>
 #include <gtest/gtest.h>
 #include <iostream>
 #include <nlohmann/json.hpp>
-#include <sstream>
 
 const static char *config_path =
     "/home/v_fantnzeng/Public/linux_study/im_server/config/db_config.json";
@@ -34,7 +31,7 @@ TEST(TestJSON, find_none) {
   auto non_it = j.find("kkkkkk");
   ASSERT_TRUE(non_it == j.end());
 }
-
+/*
 TEST(TestJSON, read_configure) {
   DB_Config cfg;
   DB_Config::load(config_path, cfg);
@@ -43,6 +40,7 @@ TEST(TestJSON, read_configure) {
   ASSERT_EQ(cfg.password,"none");
   ASSERT_EQ(cfg.url,"sqlite:///../../my_im.db3");
 }
+*/
 
 int main(int argc, char *argv[]) {
   testing::InitGoogleTest(&argc, argv);

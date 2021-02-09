@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named server
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+server/fast:
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
 
 #=============================================================================
 # Target rules for targets named master
@@ -137,6 +137,45 @@ master/fast:
 .PHONY : master/fast
 
 #=============================================================================
+# Target rules for targets named test_utils
+
+# Build rule for target.
+test_utils: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_utils
+.PHONY : test_utils
+
+# fast build rule for target.
+test_utils/fast:
+	$(MAKE) -f test/CMakeFiles/test_utils.dir/build.make test/CMakeFiles/test_utils.dir/build
+.PHONY : test_utils/fast
+
+#=============================================================================
+# Target rules for targets named test_configure
+
+# Build rule for target.
+test_configure: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_configure
+.PHONY : test_configure
+
+# fast build rule for target.
+test_configure/fast:
+	$(MAKE) -f test/CMakeFiles/test_configure.dir/build.make test/CMakeFiles/test_configure.dir/build
+.PHONY : test_configure/fast
+
+#=============================================================================
+# Target rules for targets named test_spdlog
+
+# Build rule for target.
+test_spdlog: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_spdlog
+.PHONY : test_spdlog
+
+# fast build rule for target.
+test_spdlog/fast:
+	$(MAKE) -f test/CMakeFiles/test_spdlog.dir/build.make test/CMakeFiles/test_spdlog.dir/build
+.PHONY : test_spdlog/fast
+
+#=============================================================================
 # Target rules for targets named test_json
 
 # Build rule for target.
@@ -149,13 +188,26 @@ test_json/fast:
 	$(MAKE) -f test/CMakeFiles/test_json.dir/build.make test/CMakeFiles/test_json.dir/build
 .PHONY : test_json/fast
 
+#=============================================================================
+# Target rules for targets named test_none
+
+# Build rule for target.
+test_none: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_none
+.PHONY : test_none
+
+# fast build rule for target.
+test_none/fast:
+	$(MAKE) -f test/CMakeFiles/test_none.dir/build.make test/CMakeFiles/test_none.dir/build
+.PHONY : test_none/fast
+
 main.o: main.cc.o
 
 .PHONY : main.o
 
 # target to build an object file
 main.cc.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cc.o
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/main.cc.o
 .PHONY : main.cc.o
 
 main.i: main.cc.i
@@ -164,7 +216,7 @@ main.i: main.cc.i
 
 # target to preprocess a source file
 main.cc.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cc.i
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/main.cc.i
 .PHONY : main.cc.i
 
 main.s: main.cc.s
@@ -173,7 +225,7 @@ main.s: main.cc.s
 
 # target to generate assembly for a file
 main.cc.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cc.s
+	$(MAKE) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/main.cc.s
 .PHONY : main.cc.s
 
 # Help Target
@@ -184,9 +236,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
+	@echo "... server"
 	@echo "... master"
+	@echo "... test_utils"
+	@echo "... test_configure"
+	@echo "... test_spdlog"
 	@echo "... test_json"
+	@echo "... test_none"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

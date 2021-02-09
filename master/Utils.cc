@@ -1,10 +1,11 @@
 #include "Utils.h"
+#include <algorithm>
 
 namespace utils {
 
 std::string &rtrim(std::string &ins, const std::string &pattern) {
   while (!ins.empty()) {
-    if (pattern.find(ins.back())) {
+    if (std::string::npos != pattern.find(ins.back())) {
       ins.pop_back();
     } else {
       break;
@@ -14,9 +15,9 @@ std::string &rtrim(std::string &ins, const std::string &pattern) {
 }
 
 std::string &ltrim(std::string &ins, const std::string &pattern) {
-  ins.reserve();
+  std::reverse(ins.begin(), ins.end());
   rtrim(ins, pattern);
-  ins.reserve();
+  std::reverse(ins.begin(), ins.end());
   return ins;
 }
 

@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -g   CMakeFiles/main.dir/main.cc.o  -o main  master/libmaster.a -lcryptopp -lfmt -lpthread -lpthread 
